@@ -905,8 +905,130 @@ textarea.form-control {
 .footer-social a:hover svg {
   fill: var(--on-primary);
 }
+/* Organization Section */
+.organization {
+  padding: 100px 0;
+  background-color: var(--surface-container-lowest);
+}
+
+.org-header {
+  margin-bottom: 64px;
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background-color: var(--outline-variant);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 48px;
+  padding-left: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  transform: translateX(-50%);
+  border: 4px solid var(--surface-container-lowest);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.timeline-content {
+  background-color: var(--surface-container);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-color: var(--primary);
+}
+
+.timeline-date {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: rgba(26, 179, 148, 0.1);
+  color: var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border: 1px solid rgba(26, 179, 148, 0.2);
+}
+
+.timeline-title {
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: var(--on-surface);
+}
+
+.timeline-org {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--inverse-primary);
+  margin-bottom: 24px;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--on-surface-variant);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.timeline-list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
 
 /* Responsive */
+@media (max-width: 768px) {
+  .timeline-item {
+    padding-left: 24px;
+  }
+  .timeline-content {
+    padding: 24px;
+  }
+}
+
+/* Responsive (Original) */
 @media (max-width: 1024px) {
   .hero-grid, .deep-dive-grid, .contact-grid {
     gap: 40px;
