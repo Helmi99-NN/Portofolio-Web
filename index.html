@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helmi - Tax & Finance Professional Portfolio</title>
+  <meta name="description" content="Professional portfolio of Helmi, a certified Tax and Finance specialist.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="navbar-brand">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="24" height="24" rx="6" fill="#041632" />
+          <path d="M7 12L12 7L17 12M12 7V17" stroke="#00a673" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+        Tax & Finance
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar-nav" id="navbarNav">
+        <a href="#overview" class="nav-link active">Profil</a>
+        <a href="#gallery" class="nav-link">Pengalaman</a>
+        <a href="#projects" class="nav-link">Pencapaian</a>
+        <a href="#certifications" class="nav-link">Sertifikasi</a>
+        <a href="#content" class="nav-link">Konten</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </div>
+
+      <a href="#contact" class="btn btn-primary">Download CV</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content animate-on-scroll">
+          <div class="hero-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            CERTIFIED FINANCE & TAX PROFESSIONAL
+          </div>
+          <h1>Helmi Naufal Nada</h1>
+          <p class="body-lg">Finance & Tax Professional. Berpengalaman dalam akuntansi, perpajakan, dan pengelolaan
+            keuangan multi-entitas.</p>
+
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Hubungi Saya</a>
+            <a href="#gallery" class="btn btn-secondary">Lihat Pengalaman</a>
+          </div>
+
+          <div class="hero-stats delay-200 animate-on-scroll">
+            <div class="stat-item">
+              <h3>2+</h3>
+              <p>Tahun Pengalaman</p>
+            </div>
+            <div class="stat-item">
+              <h3>3.58</h3>
+              <p>IPK Lulusan</p>
+            </div>
+            <div class="stat-item">
+              <h3>5</h3>
+              <p>Sertifikasi Profesional</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-image animate-on-scroll delay-100"
+          style="display: flex; justify-content: center; align-items: center;">
+          <img src="assets/images/profile.jpg" alt="Helmi Naufal Nada - Finance & Tax Professional"
+            style="width: 100%; max-width: 360px; border-radius: var(--radius-lg); object-fit: cover; aspect-ratio: 4/5;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Overview -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <div class="overview-grid">
+        <div class="overview-text animate-on-scroll">
+          <h2>Profil Profesional</h2>
+          <p class="body-lg intro-text"><strong>Halo, saya Helmi Naufal Nada</strong> — seorang Finance & Tax
+            Professional sekaligus digital creator berbasis di Malang, Indonesia.</p>
+
+          <p>Saya lulus dari Program D4 Keuangan Politeknik Negeri Malang dengan IPK 3,58, dan sejak itu membangun
+            pengalaman nyata di dunia keuangan — mulai dari mengelola laporan keuangan multi-entitas, menangani
+            pelaporan pajak via Coretax, hingga mendampingi bisnis UMKM dalam membangun sistem keuangan yang sehat.</p>
+
+          <p>Saya memegang sertifikasi <strong>Brevet A&B, Certified Accurate Professional (CAP), CFRM, dan
+              CFAP</strong> — bukan sekadar gelar, tapi komitmen nyata terhadap kompetensi.</p>
+
+          <p>Sebagai founder SM Management, saya juga mengelola ekosistem bisnis kecil dan membangun kehadiran digital
+            yang berdampak. Di sisi lain, saya berbagi insight seputar finance, investasi, dan self-improvement kepada
+            audiens muda Indonesia melalui konten yang relatable dan berbasis data.</p>
+
+          <blockquote class="overview-quote">
+            "Saya percaya bahwa pemahaman keuangan adalah hak semua orang — bukan privilege segelintir orang."
+          </blockquote>
+        </div>
+
+        <div class="video-container animate-on-scroll delay-100"
+          style="align-items: center; justify-content: flex-start; padding-top: 10px;">
+          <video id="profile-video" autoplay loop muted playsinline preload="metadata"
+            style="width: 100%; max-width: 300px; height: auto; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0,0,0,0.4); border: 1px solid var(--outline-variant); background-color: var(--surface-container-lowest);">
+            <source src="assets/media/pembicara.MOV">
+            Maaf, browser Anda tidak mendukung pemutaran video ini.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Gallery -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="gallery-header animate-on-scroll">
+        <div>
+          <h2>Pengalaman & Pendidikan</h2>
+          <p class="body-lg" style="color: var(--on-surface-variant); margin-top: 8px;">Perjalanan akademis dan
+            profesional saya di bidang keuangan.</p>
+        </div>
+        <div class="gallery-filter">
+          <button class="filter-btn active" data-filter="all">Semua</button>
+          <button class="filter-btn" data-filter="finance">Keuangan</button>
+          <button class="filter-btn" data-filter="education">Pendidikan</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Pengalaman 1 -->
+        <div class="gallery-card animate-on-scroll" data-category="finance">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <div class="card-badge">Nov 2023 - Sekarang</div>
+          <h3 class="card-title">PT Fibermedia Linktel</h3>
+          <p class="card-role">Akuntan</p>
+          <ul class="card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Mencatat transaksi dan menyusun laporan keuangan lengkap</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Melakukan stock opname aset dan rekonsiliasi data bulanan</li>
+          </ul>
+        </div>
+
+        <!-- Pengalaman 2 -->
+        <div class="gallery-card animate-on-scroll delay-100" data-category="finance">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+              </path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <div class="card-badge" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+            Agt 2022 - Sekarang</div>
+          <h3 class="card-title">Bolen Malang</h3>
+          <p class="card-role">Finance Staff</p>
+          <ul class="card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Menganalisis laporan laba rugi dan memantau profitabilitas</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Menyusun neraca dan laporan arus kas bisnis</li>
+          </ul>
+        </div>
+
+        <!-- Pengalaman 3 -->
+        <div class="gallery-card animate-on-scroll delay-200" data-category="finance">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="12" y1="1" x2="12" y2="23"></line>
+              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+          </div>
+          <div class="card-badge" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+            Apr 2022 - Sekarang</div>
+          <h3 class="card-title">SM Management</h3>
+          <p class="card-role">Founder</p>
+          <ul class="card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Berkoordinasi langsung dengan klien UMKM </li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Memimpin tim produksi konten dan optimalisasi pemasaran digital</li>
+          </ul>
+        </div>
+
+        <!-- Pengalaman 4 -->
+        <div class="gallery-card animate-on-scroll" data-category="finance">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="card-badge" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+            Agt - Des 2024</div>
+          <h3 class="card-title">Dinas Koperasi UMKM Kota Batu</h3>
+          <p class="card-role">Finance Staff</p>
+          <ul class="card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Menyusun Rencana Kegiatan dan Anggaran (RKA)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Melayani pendataan >200 pelaku UMKM dan perizinan usaha</li>
+          </ul>
+        </div>
+
+        <!-- Pengalaman 5 -->
+        <div class="gallery-card animate-on-scroll delay-100" data-category="finance">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="card-badge" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+            Des 2023 - Jan 2024</div>
+          <h3 class="card-title">Bank Negara Indonesia (BNI)</h3>
+          <p class="card-role">Finance Intern</p>
+          <ul class="card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Manajemen arsip dokumen dan pemeliharaan data bank</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Layanan pelanggan dan informasi perbankan</li>
+          </ul>
+        </div>
+
+        <!-- Pendidikan -->
+        <div class="gallery-card animate-on-scroll delay-200" data-category="education">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+          </div>
+          <div class="card-badge" style="background-color: var(--surface-container); color: var(--on-surface-variant);">
+            IPK: 3.58</div>
+          <h3 class="card-title">Politeknik Negeri Malang</h3>
+          <p class="card-role">D4 Keuangan</p>
+          <ul class="card-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Lulusan D4 Ilmu Keuangan (Masuk 2021)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg> Aktif sebagai Koordinator dan Ketua Pelaksana di UKM Usaha Mahasiswa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Deep-Dive -->
+  <section class="deep-dive" id="projects">
+    <div class="container">
+      <div class="deep-dive-grid">
+        <div class="deep-dive-image animate-on-scroll"
+          style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+          <img src="assets/images/prestasi.jpg" alt="Dokumentasi Prestasi Helmi Naufal Nada"
+            style="width: 100%; max-width: 480px; border-radius: var(--radius-lg); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); border: 1px solid var(--outline-variant); object-fit: cover; aspect-ratio: 4/5;">
+        </div>
+
+        <div class="deep-dive-content animate-on-scroll delay-100">
+          <h2>Pencapaian & Prestasi Terbaik</h2>
+          <p class="body-lg">Berdedikasi tinggi terhadap pengembangan diri dan selalu berprestasi di tingkat institusi
+            maupun nasional, mendemonstrasikan keunggulan dalam analisis riset ilmiah, kewirausahaan, dan akuntansi.</p>
+
+          <div class="deep-dive-features">
+            <div class="feature-item" style="grid-column: span 2;">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Juara 1 & Presentasi Terbaik</h4>
+                <p>Equilibrium Scientific Research Competition 2023</p>
+              </div>
+            </div>
+
+            <div class="feature-item" style="grid-column: span 2;">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Juara 3 Kompetisi Podcast Kewirausahaan</h4>
+                <p>E-Fest By ETU POLINEMA</p>
+              </div>
+            </div>
+
+            <div class="feature-item" style="grid-column: span 2;">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div class="feature-text">
+                <h4>Semifinalis Kompetisi Akuntansi</h4>
+                <p>Politeknik Negeri Malang</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Unduh CV Lengkap</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifications" id="certifications">
+    <div class="container">
+      <div class="cert-header animate-on-scroll">
+        <h2>Sertifikasi Profesional</h2>
+        <p class="body-lg">Kredensial resmi yang memvalidasi kompetensi di bidang akuntansi, perpajakan, dan manajemen
+          risiko.</p>
+      </div>
+
+      <div class="cert-grid">
+        <!-- Brevet -->
+        <div class="cert-card animate-on-scroll">
+          <div class="cert-icon" style="width: 48px; height: 48px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+              <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">Perpajakan</span>
+            <h3 style="margin-top: 12px; font-size: 18px;">Brevet A&B Terapan (CTT)</h3>
+            <p>Sertifikasi Certified Tax Technician kompetensi ahli pajak.</p>
+          </div>
+        </div>
+
+        <!-- CAP -->
+        <div class="cert-card animate-on-scroll delay-100">
+          <div class="cert-icon" style="width: 48px; height: 48px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+              </polygon>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">Accurate</span>
+            <h3 style="margin-top: 12px; font-size: 18px;">CAP Certification</h3>
+            <p>Certified Accurate Professional membuktikan keahlian software akuntansi terkomputerisasi.</p>
+          </div>
+        </div>
+
+        <!-- CFRM -->
+        <div class="cert-card animate-on-scroll delay-200">
+          <div class="cert-icon" style="width: 48px; height: 48px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">Risk Management</span>
+            <h3 style="margin-top: 12px; font-size: 18px;">CFRM Professional</h3>
+            <p>Certified Fundamental Risk Management: Identifikasi dan mitigasi risiko dasar.</p>
+          </div>
+        </div>
+
+        <!-- Halal -->
+        <div class="cert-card animate-on-scroll delay-300">
+          <div class="cert-icon" style="width: 48px; height: 48px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="cert-info">
+            <span class="cert-issuer">Halal Product</span>
+            <h3 style="margin-top: 12px; font-size: 18px;">SMI Companion Certification</h3>
+            <p>Sertifikasi pendamping proses produk halal (Halal Product Process Companion).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Creator Section -->
+  <section class="content-gallery" id="content">
+    <div class="container">
+      <div class="content-header animate-on-scroll">
+        <h2>Karya Konten Digital</h2>
+        <p class="body-lg" style="color: var(--on-surface-variant); margin-top: 8px;">Mengedukasi audiens muda seputar finance, investasi, dan pengembangan diri melalui konten visual yang menarik dan berbasis data.</p>
+      </div>
+
+      <div class="carousel-wrapper" style="position: relative;">
+        <!-- Tombol Panah Kiri -->
+        <button class="carousel-btn prev-btn" id="scrollLeftBtn" aria-label="Geser Kiri">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+
+        <!-- Tombol Panah Kanan -->
+        <button class="carousel-btn next-btn" id="scrollRightBtn" aria-label="Geser Kanan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+
+        <div class="content-grid" id="contentGrid">
+        <!-- Content 1 -->
+        <div class="content-card animate-on-scroll">
+          <div class="content-video-wrapper">
+            <!-- Ganti SRC dengan file video Anda -->
+            <video controls preload="metadata" class="content-video">
+              <source src="assets/media/pesan bahagia.mp4">
+              Browser Anda tidak mendukung pemutaran video.
+            </video>
+          </div>
+          <div class="content-info">
+            <h3 class="content-title">Pesan Bahagia (Contoh)</h3>
+            <p class="content-desc">Video edukasi mengenai mindset dan pengembangan diri.</p>
+          </div>
+        </div>
+
+        <!-- Content 2 -->
+        <div class="content-card animate-on-scroll delay-100">
+          <div class="content-video-wrapper">
+            <!-- Ganti SRC dengan file video Anda -->
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/R0eMCcqwm34?playsinline=1&rel=0&modestbranding=1" 
+              class="content-video" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="content-info">
+            <h3 class="content-title">Cara Scanning Karakter</h3>
+            <p class="content-desc">Menganalisa profil karakter seseorang untuk kebutuhan HR.</p>
+          </div>
+        </div>
+
+        <!-- Content 3 -->
+        <div class="content-card animate-on-scroll delay-200">
+          <div class="content-video-wrapper">
+            <!-- Ganti SRC dengan file video Anda -->
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/RULwYXYYdKE?playsinline=1&rel=0&modestbranding=1" 
+              class="content-video" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="content-info">
+            <h3 class="content-title">Ketakutan Hanyalah Skenario</h3>
+            <p class="content-desc">Motivasi dan cara mengatasi overthinking dalam berkarir.</p>
+          </div>
+        </div>
+
+        <!-- Content 4 -->
+        <div class="content-card animate-on-scroll delay-300">
+          <div class="content-video-wrapper">
+            <!-- Ganti SRC dengan file video Anda -->
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/XmfZLw698Uk?playsinline=1&rel=0&modestbranding=1" 
+              class="content-video" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="content-info">
+            <h3 class="content-title">Spesialis vs Generalis</h3>
+            <p class="content-desc">Membahas keunggulan dan perbedaan karir antara spesialis dan generalis.</p>
+          </div>
+        </div>
+
+        <!-- Content 5 -->
+        <div class="content-card animate-on-scroll delay-400">
+          <div class="content-video-wrapper">
+            <!-- Ganti SRC dengan file video Anda -->
+            <iframe 
+              src="https://www.youtube-nocookie.com/embed/qnmid87MGck?playsinline=1&rel=0&modestbranding=1" 
+              class="content-video" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="content-info">
+            <h3 class="content-title">3 Mindset Penting</h3>
+            <p class="content-desc">Tiga pola pikir utama agar mental tetap kuat dalam membangun karir.</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info animate-on-scroll">
+          <h2>Let's Connect</h2>
+          <p class="body-lg">Available for freelance consulting, full-time opportunities, and strategic financial
+            partnerships.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <h4>Email</h4>
+                <p>hnaufalnada@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <h4>Phone</h4>
+                <p>085-736-737-773</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-item-text">
+                <h4>Location</h4>
+                <p>Malang, Indonesia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper animate-on-scroll delay-100">
+          <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control" required placeholder="John">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control" required placeholder="Doe">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input type="email" id="email" class="form-control" required placeholder="john@company.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone Number</label>
+                <input type="tel" id="phone" class="form-control" placeholder="+62 812...">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea id="message" class="form-control" required
+                placeholder="How can I help you with your tax or financial needs?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">
+        Tax & Finance.
+      </div>
+
+      <div class="footer-copyright" style="font-size: 14px;">
+        &copy; 2026 Helmi. All rights reserved.
+      </div>
+
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+            </path>
+          </svg>
+        </a>
+        <a href="#" aria-label="GitHub">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
