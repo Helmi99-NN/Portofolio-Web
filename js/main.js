@@ -155,33 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
     videoObserver.observe(profileVideo);
   }
 
-  // Content Videos Auto-Pause on Scroll & Exclusive Play
-  const contentVideos = document.querySelectorAll('.content-video');
-  if (contentVideos.length > 0) {
-    const contentVideoObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          // Jika video keluar layar, otomatis pause
-          if (!entry.target.paused) {
-            entry.target.pause();
-          }
-        }
-      });
-    }, { threshold: 0.05 }); // Terpicu saat video hampir sepenuhnya hilang dari layar
-    
-    contentVideos.forEach(video => {
-      contentVideoObserver.observe(video);
-      
-      // Eksklusif: Pause video lain saat satu video diputar
-      video.addEventListener('play', () => {
-        contentVideos.forEach(otherVideo => {
-          if (otherVideo !== video && !otherVideo.paused) {
-            otherVideo.pause();
-          }
-        });
-      });
-    });
-  }
+  // Content Videos observer logic is now initialized after data is loaded
+  // see initDynamicVideoObservers() called in loadCMSData()
 
   // Carousel Scroll Logic
   const scrollLeftBtn = document.getElementById('scrollLeftBtn');
@@ -228,8 +203,24 @@ window.sendToWhatsApp = function(event) {
 // --- CMS Data Fetching & Rendering ---
 async function loadCMSData() {
   try {
-    // Fetch from API or directly from json file
-    const res = await fetch('/api/data').catch(() => fetch('data.json'));
+    // Fetch from API
+    let res;
+    try {
+      res = await fetch('/api/data');
+    } catch (e) {
+      // Network error (e.g. API not running)
+    }
+
+    // Fallback to data.json if API is not available or returns HTML (e.g. static hosting returning index.html for unknown routes)
+    if (!res || !res.ok || !res.headers.get('content-type')?.includes('application/json')) {
+      // Tambahkan timestamp untuk menghindari browser me-load file data.json yang tersimpan di cache lama
+      res = await fetch('data.json?t=' + new Date().getTime());
+    }
+
+    if (!res.ok) {
+      throw new Error(`Failed to load data: ${res.status}`);
+    }
+
     const data = await res.json();
     
     renderExperiences(data.experiences || []);
@@ -239,6 +230,8 @@ async function loadCMSData() {
     
     // Re-initialize animations after rendering
     initScrollAnimations();
+    // Initialize dynamic video observers
+    initDynamicVideoObservers();
   } catch (err) {
     console.error('Error loading CMS data:', err);
   }
@@ -357,4 +350,39 @@ function initScrollAnimations() {
   }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
   
   revealElements.forEach(el => revealObserver.observe(el));
+}
+
+function initDynamicVideoObservers() {
+  const contentVideos = document.querySelectorAll('.content-video');
+  if (contentVideos.length === 0) return;
+  
+  const contentVideoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        if (entry.target.tagName === 'VIDEO' && !entry.target.paused) {
+          entry.target.pause();
+        } else if (entry.target.tagName === 'IFRAME') {
+          entry.target.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+        }
+      }
+    });
+  }, { threshold: 0.05 });
+  
+  contentVideos.forEach(video => {
+    contentVideoObserver.observe(video);
+    
+    if (video.tagName === 'VIDEO') {
+      video.addEventListener('play', () => {
+        contentVideos.forEach(otherVideo => {
+          if (otherVideo !== video) {
+            if (otherVideo.tagName === 'VIDEO' && !otherVideo.paused) {
+              otherVideo.pause();
+            } else if (otherVideo.tagName === 'IFRAME') {
+              otherVideo.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            }
+          }
+        });
+      });
+    }
+  });
 }
