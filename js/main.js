@@ -232,6 +232,8 @@ async function loadCMSData() {
     initScrollAnimations();
     // Initialize dynamic video observers
     initDynamicVideoObservers();
+    // Initialize YouTube Players
+    initYouTubePlayers();
   } catch (err) {
     console.error('Error loading CMS data:', err);
   }
@@ -317,7 +319,7 @@ function getYouTubeEmbedUrl(url) {
   const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)([^#\&\?]*).*/;
   const match = url.match(regExp);
   if (match && match[2].length === 11) {
-    return `https://www.youtube-nocookie.com/embed/${match[2]}?playsinline=1&rel=0&modestbranding=1`;
+    return `https://www.youtube-nocookie.com/embed/${match[2]}?playsinline=1&rel=0&modestbranding=1&enablejsapi=1`;
   }
   return null;
 }
@@ -402,3 +404,64 @@ function initDynamicVideoObservers() {
     }
   });
 }
+
+// --- YouTube IFrame API Logic ---
+window.ytPlayers = [];
+
+function initYouTubePlayers() {
+  if (typeof YT !== 'undefined' && YT.Player) {
+    bindYouTubePlayers();
+  } else {
+    if (!window.ytApiLoaded) {
+      window.ytApiLoaded = true;
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      
+      window.onYouTubeIframeAPIReady = function() {
+        bindYouTubePlayers();
+      };
+    }
+  }
+}
+
+function bindYouTubePlayers() {
+  const iframes = document.querySelectorAll('iframe.content-video');
+  iframes.forEach((iframe) => {
+    if (iframe.dataset.ytBound) return;
+    iframe.dataset.ytBound = "true";
+    
+    if (!iframe.id) {
+      iframe.id = 'yt-player-' + Math.random().toString(36).substring(7);
+    }
+    
+    const player = new YT.Player(iframe.id, {
+      events: {
+        'onStateChange': onPlayerStateChange
+      }
+    });
+    window.ytPlayers.push(player);
+  });
+}
+
+function onPlayerStateChange(event) {
+  // YT.PlayerState.PLAYING is 1
+  if (event.data === 1) {
+    // Pause other YT videos
+    window.ytPlayers.forEach(player => {
+      if (player !== event.target && typeof player.pauseVideo === 'function') {
+        player.pauseVideo();
+      }
+    });
+    
+    // Pause HTML5 videos
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+      if (video.id !== 'profile-video' && !video.paused) {
+        video.pause();
+      }
+    });
+  }
+}
+
