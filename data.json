@@ -1,0 +1,206 @@
+{
+  "experiences": [
+    {
+      "id": "exp_1",
+      "category": "finance",
+      "date": "Nov 2023 - Sekarang",
+      "title": "PT Fibermedia Linktel",
+      "role": "Akuntan",
+      "points": [
+        "Mencatat transaksi dan menyusun laporan keuangan lengkap",
+        "Melakukan stock opname aset dan rekonsiliasi data bulanan"
+      ]
+    },
+    {
+      "id": "exp_2",
+      "category": "finance",
+      "date": "Agt 2022 - Sekarang",
+      "title": "Bolen Malang",
+      "role": "Finance Staff",
+      "points": [
+        "Menganalisis laporan laba rugi dan memantau profitabilitas",
+        "Menyusun neraca dan laporan arus kas bisnis"
+      ]
+    },
+    {
+      "id": "exp_3",
+      "category": "finance",
+      "date": "Apr 2022 - Sekarang",
+      "title": "SM Management",
+      "role": "Founder",
+      "points": [
+        "Berkoordinasi langsung dengan klien UMKM",
+        "Memimpin tim produksi konten dan optimalisasi pemasaran digital"
+      ]
+    },
+    {
+      "id": "exp_4",
+      "category": "finance",
+      "date": "Agt - Des 2024",
+      "title": "Dinas Koperasi UMKM Kota Batu",
+      "role": "Finance Staff",
+      "points": [
+        "Menyusun Rencana Kegiatan dan Anggaran (RKA)",
+        "Melayani pendataan >200 pelaku UMKM dan perizinan usaha"
+      ]
+    },
+    {
+      "id": "exp_5",
+      "category": "finance",
+      "date": "Des 2023 - Jan 2024",
+      "title": "Bank Negara Indonesia (BNI)",
+      "role": "Finance Intern",
+      "points": [
+        "Manajemen arsip dokumen dan pemeliharaan data bank",
+        "Layanan pelanggan dan informasi perbankan"
+      ]
+    },
+    {
+      "id": "exp_6",
+      "category": "education",
+      "date": "IPK: 3.58",
+      "title": "Politeknik Negeri Malang",
+      "role": "D4 Keuangan",
+      "points": [
+        "Lulusan D4 Ilmu Keuangan (Masuk 2021)",
+        "Aktif sebagai Koordinator dan Ketua Pelaksana di UKM Usaha Mahasiswa"
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org_1",
+      "date": "Feb 2023 - Feb 2024",
+      "title": "Kepala Divisi Penelitian dan Pengembangan",
+      "org": "UKM USAHA MAHASISWA",
+      "points": [
+        "Bertanggung jawab atas kemajuan dan pengembangan Divisi Penelitian dan Pengembangan.",
+        "Mengontrol dan memantau Divisi Penelitian dan Pengembangan dalam hal program kerja, keuangan, dan masalah yang dihadapi.",
+        "Bertanggung jawab atas pengembangan sumber daya manusia UKM Usaha Mahasiswa secara umum dan Divisi Penelitian dan Pengembangan pada khususnya."
+      ]
+    },
+    {
+      "id": "org_2",
+      "date": "Nov 2022 - Des 2022",
+      "title": "Koordinator Publikasi, Dokumentasi, dan Dekorasi Studi Banding",
+      "org": "UKM USAHA MAHASISWA",
+      "points": [
+        "Mengoordinasikan desain untuk publikasi acara termasuk membuat desain poster, spanduk, dan materi promosi lainnya.",
+        "Merencanakan tata letak tempat duduk dan kebutuhan dekorasi di lokasi acara.",
+        "Memastikan setiap momen berharga selama acara diabadikan melalui foto dan video."
+      ]
+    },
+    {
+      "id": "org_3",
+      "date": "Jul 2022 - Okt 2022",
+      "title": "Koordinator Lapangan Wawancara Open Recruitment",
+      "org": "UKM USAHA MAHASISWA",
+      "points": [
+        "Mengawasi dan mengarahkan semua kegiatan di lapangan agar berjalan lancar sesuai dengan rencana dan target yang ditetapkan.",
+        "Bertanggung jawab atas penyelesaian pekerjaan di lapangan dan mengatasi hambatan yang muncul selama proses wawancara."
+      ]
+    },
+    {
+      "id": "org_4",
+      "date": "Jun 2022 - Jul 2022",
+      "title": "Koordinator Lapangan Digital Preneur",
+      "org": "UKM USAHA MAHASISWA",
+      "points": [
+        "Mengawasi dan mengarahkan semua kegiatan di lapangan agar berjalan lancar sesuai dengan rencana dan target yang ditetapkan.",
+        "Bertanggung jawab atas penyelesaian pekerjaan di lapangan dan mengatasi hambatan yang muncul selama acara Digital Preneur."
+      ]
+    },
+    {
+      "id": "org_5",
+      "date": "Mar 2022 - Jun 2022",
+      "title": "Ketua Pelaksana Education Preneur 2022",
+      "org": "UKM USAHA MAHASISWA",
+      "points": [
+        "Bertanggung jawab mengoordinasikan seluruh tim panitia, menyelenggarakan rapat koordinasi, dan melakukan evaluasi.",
+        "Memastikan seluruh kegiatan berjalan sesuai dengan anggaran dan jadwal yang telah ditetapkan.",
+        "Menangani masalah dan hambatan yang muncul selama proses persiapan acara."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "id": "cert_1",
+      "issuer": "Perpajakan",
+      "title": "Brevet A&B Terapan (CTT)",
+      "desc": "Sertifikasi Certified Tax Technician kompetensi ahli pajak.",
+      "svgIcon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"></path><polyline points=\"22 4 12 14.01 9 11.01\"></polyline></svg>"
+    },
+    {
+      "id": "cert_2",
+      "issuer": "Accurate",
+      "title": "CAP Certification",
+      "desc": "Certified Accurate Professional membuktikan keahlian software akuntansi terkomputerisasi.",
+      "svgIcon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"></polygon></svg>"
+    },
+    {
+      "id": "cert_3",
+      "issuer": "Risk Management",
+      "title": "CFRM Professional",
+      "desc": "Certified Fundamental Risk Management: Identifikasi dan mitigasi risiko dasar.",
+      "svgIcon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"2\" ry=\"2\"></rect><line x=\"1\" y=\"1\" x1=\"3\" y1=\"9\" x2=\"21\" y2=\"9\"></line><line x=\"1\" y=\"1\" x1=\"9\" y1=\"21\" x2=\"9\" y2=\"9\"></line></svg>"
+    },
+    {
+      "id": "cert_4",
+      "issuer": "Halal Product",
+      "title": "SMI Companion Certification",
+      "desc": "Sertifikasi pendamping proses produk halal (Halal Product Process Companion).",
+      "svgIcon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"></path></svg>"
+    },
+    {
+      "id": "cert_5",
+      "issuer": "BNSP",
+      "title": "Pendamping IKM",
+      "desc": "Sertifikat Kompetensi Kewirausahaan Industri (Industrial Entrepreneurship).",
+      "svgIcon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"7\" width=\"20\" height=\"14\" rx=\"2\" ry=\"2\"></rect><path d=\"M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16\"></path></svg>"
+    },
+    {
+      "id": "cert_6",
+      "issuer": "ESAS Management",
+      "title": "CFAP Professional",
+      "desc": "Certified Financial Analyst Professional: Sertifikasi keahlian analisis keuangan profesional.",
+      "svgIcon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"23 6 13.5 15.5 8.5 10.5 1 18\"></polyline><polyline points=\"17 6 23 6 23 12\"></polyline></svg>"
+    }
+  ],
+  "contents": [
+    {
+      "id": "vid_1",
+      "type": "video",
+      "src": "https://youtube.com/shorts/mbIPTUDX9o4?si=9KpNuSe-LproLyAU",
+      "title": "Pesan Bahagia dari 1.000 Lansia",
+      "desc": "Video edukasi mengenai mindset dan pengembangan diri."
+    },
+    {
+      "id": "vid_2",
+      "type": "iframe",
+      "src": "https://www.youtube-nocookie.com/embed/R0eMCcqwm34?playsinline=1&rel=0&modestbranding=1",
+      "title": "Cara Scanning Karakter",
+      "desc": "Menganalisa profil karakter seseorang untuk kebutuhan HR."
+    },
+    {
+      "id": "vid_3",
+      "type": "iframe",
+      "src": "https://www.youtube-nocookie.com/embed/RULwYXYYdKE?playsinline=1&rel=0&modestbranding=1",
+      "title": "Ketakutan Hanyalah Skenario",
+      "desc": "Motivasi dan cara mengatasi overthinking dalam berkarir."
+    },
+    {
+      "id": "vid_4",
+      "type": "iframe",
+      "src": "https://www.youtube-nocookie.com/embed/XmfZLw698Uk?playsinline=1&rel=0&modestbranding=1",
+      "title": "Spesialis vs Generalis",
+      "desc": "Membahas keunggulan dan perbedaan karir antara spesialis dan generalis."
+    },
+    {
+      "id": "vid_5",
+      "type": "iframe",
+      "src": "https://www.youtube-nocookie.com/embed/qnmid87MGck?playsinline=1&rel=0&modestbranding=1",
+      "title": "3 Mindset Penting",
+      "desc": "Tiga pola pikir utama agar mental tetap kuat dalam membangun karir."
+    }
+  ]
+}
