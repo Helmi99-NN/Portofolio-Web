@@ -199,6 +199,9 @@ document.addEventListener('DOMContentLoaded', () => {
       contentGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
   }
+
+  // Load CMS Data
+  loadCMSData();
 });
 
 // WhatsApp Contact Form Submission
@@ -221,3 +224,137 @@ window.sendToWhatsApp = function(event) {
   const waURL = `https://wa.me/${waNumber}?text=${text}`;
   window.open(waURL, '_blank');
 };
+
+// --- CMS Data Fetching & Rendering ---
+async function loadCMSData() {
+  try {
+    // Fetch from API or directly from json file
+    const res = await fetch('/api/data').catch(() => fetch('data.json'));
+    const data = await res.json();
+    
+    renderExperiences(data.experiences || []);
+    renderOrganizations(data.organizations || []);
+    renderCertifications(data.certifications || []);
+    renderContents(data.contents || []);
+    
+    // Re-initialize animations after rendering
+    initScrollAnimations();
+  } catch (err) {
+    console.error('Error loading CMS data:', err);
+  }
+}
+
+function renderExperiences(exps) {
+  const container = document.getElementById('galleryGrid');
+  if (!container) return;
+  
+  let html = '';
+  exps.forEach((exp, index) => {
+    let delay = (index % 3) * 100;
+    let delayClass = delay > 0 ? `delay-${delay}` : '';
+    let svgIcon = exp.category === 'education' 
+      ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>`
+      : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>`;
+      
+    let listItems = exp.points.map(p => `<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> ${p}</li>`).join('');
+    
+    html += `
+      <div class="gallery-card animate-on-scroll ${delayClass}" data-category="${exp.category}">
+        <div class="card-icon">${svgIcon}</div>
+        <div class="card-badge" ${exp.category === 'education' ? 'style="background-color: var(--surface-container); color: var(--on-surface-variant);"' : ''}>${exp.date}</div>
+        <h3 class="card-title">${exp.title}</h3>
+        <p class="card-role">${exp.role}</p>
+        <ul class="card-list">${listItems}</ul>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+}
+
+function renderOrganizations(orgs) {
+  const container = document.getElementById('timelineGrid');
+  if (!container) return;
+  
+  let html = '';
+  orgs.forEach((org, index) => {
+    let delay = (index % 3) * 100;
+    let delayClass = delay > 0 ? `delay-${delay}` : '';
+    let listItems = org.points.map(p => `<li>${p}</li>`).join('');
+    
+    html += `
+      <div class="timeline-item animate-on-scroll ${delayClass}">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">${org.date}</div>
+          <h3 class="timeline-title">${org.title}</h3>
+          <h4 class="timeline-org">${org.org}</h4>
+          <ul class="timeline-list">${listItems}</ul>
+        </div>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+}
+
+function renderCertifications(certs) {
+  const container = document.getElementById('certGrid');
+  if (!container) return;
+  
+  let html = '';
+  certs.forEach((cert, index) => {
+    let delay = (index % 3) * 100;
+    let delayClass = delay > 0 ? `delay-${delay}` : '';
+    
+    html += `
+      <div class="cert-card animate-on-scroll ${delayClass}">
+        <div class="cert-icon" style="width: 48px; height: 48px;">${cert.svgIcon}</div>
+        <div class="cert-info">
+          <span class="cert-issuer">${cert.issuer}</span>
+          <h3 style="margin-top: 12px; font-size: 18px;">${cert.title}</h3>
+          <p>${cert.desc}</p>
+        </div>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+}
+
+function renderContents(contents) {
+  const container = document.getElementById('contentGrid');
+  if (!container) return;
+  
+  let html = '';
+  contents.forEach((c, index) => {
+    let delay = (index % 4) * 100;
+    let delayClass = delay > 0 ? `delay-${delay}` : '';
+    
+    let mediaHTML = c.type === 'video'
+      ? `<video controls preload="metadata" class="content-video"><source src="${c.src}">Browser Anda tidak mendukung pemutaran video.</video>`
+      : `<iframe src="${c.src}" class="content-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+      
+    html += `
+      <div class="content-card animate-on-scroll ${delayClass}">
+        <div class="content-video-wrapper">${mediaHTML}</div>
+        <div class="content-info">
+          <h3 class="content-title">${c.title}</h3>
+          <p class="content-desc">${c.desc}</p>
+        </div>
+      </div>
+    `;
+  });
+  container.innerHTML = html;
+}
+
+function initScrollAnimations() {
+  const revealElements = document.querySelectorAll('.animate-on-scroll:not(.animate-slide-up)');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-slide-up');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  
+  revealElements.forEach(el => revealObserver.observe(el));
+}
