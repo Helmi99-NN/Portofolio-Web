@@ -312,6 +312,16 @@ function renderCertifications(certs) {
   container.innerHTML = html;
 }
 
+function getYouTubeEmbedUrl(url) {
+  if (!url) return null;
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=|shorts\/)([^#\&\?]*).*/;
+  const match = url.match(regExp);
+  if (match && match[2].length === 11) {
+    return `https://www.youtube-nocookie.com/embed/${match[2]}?playsinline=1&rel=0&modestbranding=1`;
+  }
+  return null;
+}
+
 function renderContents(contents) {
   const container = document.getElementById('contentGrid');
   if (!container) return;
@@ -321,9 +331,15 @@ function renderContents(contents) {
     let delay = (index % 4) * 100;
     let delayClass = delay > 0 ? `delay-${delay}` : '';
     
-    let mediaHTML = c.type === 'video'
-      ? `<video controls preload="metadata" class="content-video"><source src="${c.src}">Browser Anda tidak mendukung pemutaran video.</video>`
-      : `<iframe src="${c.src}" class="content-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    let mediaHTML = '';
+    const ytEmbedUrl = getYouTubeEmbedUrl(c.src);
+    
+    if (ytEmbedUrl || c.type === 'iframe') {
+      const finalSrc = ytEmbedUrl || c.src;
+      mediaHTML = `<iframe src="${finalSrc}" class="content-video" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    } else {
+      mediaHTML = `<video controls preload="metadata" class="content-video"><source src="${c.src}">Browser Anda tidak mendukung pemutaran video.</video>`;
+    }
       
     html += `
       <div class="content-card animate-on-scroll ${delayClass}">
